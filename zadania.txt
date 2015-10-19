@@ -1,0 +1,57 @@
+# 1. Zamień tablicę liczb na tablicę liczb o 1 większych.
+
+[2,5,6,10].each do |a|
+a += 1  
+puts "#{a}"
+end
+
+# 2. Mamy taką tablicę [nil,nil,34,53,55,22,nil,3,nil,46] jak można usunąć z niej nil'e ?
+
+tab = [nil,nil,34,53,55,22,nil,3,nil,46]
+tab.compact!
+puts tab
+
+# 3. Poszukaj metody, która zmieni obiekt typu string na tablicę jego znaków
+
+kodowanie.split("")
+
+# 4. Poszukaj metody, która zmieni obiekt typu string na tablicę jego znaków
+
+kodowanie.split("")
+
+# 5. Stwórz tablicę [256, 128, 64, 32, 16, 8, 4, 2] inaczej niż ją po prostu wpisując :)
+# Czy można lepiej zrobić to zadanie, używając .each do ?
+
+i = 256
+while i >= 2
+  puts "#{i}"
+  i = i/2
+end
+
+# Szyfrer 1.
+# Zakładamy, że metoda dostaje słowo. Na wyjściu ma zwrócić słowo składające się ze znaków "o jeden większych" (kolejność w alfabecie)
+
+print "Podaj slowo!"
+slowo = gets.chomp
+litery = slowo.split("")
+
+litery.each { |litera|
+ litera = litera.next
+ puts litera 
+ }
+ 
+# Szyfrer 2. Jak dotąd założyliśmy, że na wejściu dostajemy słowo. 
+# Teraz na wejściu dostajemy zdanie ­zwróć ponownie zdanie, w którym każda z liter jest "o jeden większa" z zachowaniem przerw między słowami.
+	
+print "Podaj zdanie!"
+slowo = gets.chomp
+znaki = slowo.split("")
+
+znaki.each do |znak|
+  if znak == " "
+    puts znak
+  else
+    znak = znak.next
+    puts znak
+  end
+end
